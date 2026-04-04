@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise With Ritik | Daily Life • Hustle • Growth</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1A3A8F;
+            --accent-yellow: #FFD700;
+            --soft-yellow: #FFFDE7;
+            --white: #ffffff;
+            --black: #121212;
+            --grey: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-yellow);
+            background: var(--primary-blue);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        header {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--soft-yellow) 0%, var(--white) 100%);
+            padding: 0 8%;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(40px, 8vw, 80px);
+            color: var(--primary-blue);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: clamp(18px, 2vw, 24px);
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(26, 58, 143, 0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            background: #152d6e;
+            box-shadow: 0 15px 30px rgba(26, 58, 143, 0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            background: var(--white);
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--grey);
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            background: var(--soft-yellow);
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-blue);
+            margin: 20px 0 10px;
+            font-size: 22px;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+        }
+
+        /* Banner Style Section */
+        .brand-banner {
+            background: linear-gradient(to right, var(--accent-yellow), #ff9100);
+            padding: 80px 8%;
+            text-align: center;
+            color: var(--primary-blue);
+        }
+
+        .brand-banner h2 {
+            font-size: clamp(30px, 5vw, 50px);
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-content {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+            header {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo"><span>RISE</span> WITH RITIK</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#vlogs">Vlogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Rise With Ritik</h1>
+            <p>Daily Life • Hustle • Growth 🚀</p>
+            <a href="https://www.youtube.com/@edulatelearning9676" target="_blank" class="cta-btn">Subscribe to YouTube</a>
+        </div>
+    </header>
+
+    <section class="features" id="about">
+        <div class="feature-card">
+            <div class="feature-icon">🌅</div>
+            <h3>Morning Vlogs</h3>
+            <p>Har din ki nayi shuruat, fresh productivity tips ke saath.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💼</div>
+            <h3>The Hustle</h3>
+            <p>Kaise apne sapno ke liye mehnat karni hai aur grow karna hai.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Self Improvement</h3>
+            <p>Har din khud ko behtar banane ki journey mein mere saath judein.</p>
+        </div>
+    </section>
+
+    <section class="brand-banner">
+        <h2>Billionaire Mindset. Modern Lifestyle.</h2>
+        <p>Join our community of over 100k+ hustlers on the path to success.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Sath Milkar Grow Karte Hain!</h2>
+        <p>Email: contact@risewithritik.com</p>
+        <br>
+        <a href="mailto:mishraritik833@gmail.com" class="cta-btn">Send an Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rise With Ritik. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
